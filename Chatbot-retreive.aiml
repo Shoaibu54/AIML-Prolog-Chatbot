@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <pattern>TELL ME *</pattern>
+  <template><srai><star/></srai></template>
+</category>
+
+<category>
+  <pattern>CAN YOU TELL ME *</pattern>
+  <template><srai><star/></srai></template>
+</category>
+
+<category>
+  <pattern>PLEASE *</pattern>
+  <template><srai><star/></srai></template>
+</category>
+
+<category>
+  <pattern>I WANT TO KNOW *</pattern>
+  <template><srai><star/></srai></template>
+</category>
+
+  <category>
+      <pattern>WHO IS * OF *</pattern>
+      <template>
+        <think>
+          <set name="type">whois</set>
+        </think>
+        <get name="p2"/> is <set name="rel"><star/></set> of <set name="p1"><star index="2"/></set>
+       </template>
+  </category>
+  
+  <category>
+      <pattern>WHO IS THE * OF *</pattern>
+      <template><srai>WHO IS <star/> OF <star index="2"/></srai></template>
+  </category>
+
+  <category>
+    <pattern>DOES * HAVE A *</pattern>
+    <template>
+        <think>
+          <set name="type">does</set>
+          <set name="p1"><star/></set>
+          <set name="rel"><star index="2"/></set>
+        </think>
+        <condition name="answer">
+            <li value="Yes">Yes, <get name="p1"/> does have a <get name="rel"/>.</li>
+            <li value="No">No, <get name="p1"/> does not have a <get name="rel"/>.</li>
+            <li>I'm not sure if <get name="p1"/> has a <get name="rel"/>.</li>
+        </condition>
+    </template>
+  </category>
+
+  <category>
+    <pattern>DOES * HAVE ANY *</pattern>
+    <template>
+      <srai>DOES <star/> HAVE A <star index="2"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>DOES * HAVE *</pattern>
+    <template>
+      <srai>DOES <star/> HAVE A <star index="2"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>DOES * HAVE SOME *</pattern>
+    <template>
+      <srai>DOES <star/> HAVE A <star index="2"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>DOES * HAVE AN *</pattern>
+    <template>
+      <srai>DOES <star/> HAVE A <star index="2"/></srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>* DOES * HAVE AN *</pattern>
+    <template>
+      <srai>DOES <star index="2"/> HAVE A <star index="3"/></srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>IS * THE * OF *</pattern>
+    <template>
+        <think>
+          <set name="type">isthe</set>
+          <set name="p1"><star/></set>
+          <set name="rel"><star index="2"/></set>
+          <set name="p2"><star index="3"/></set>
+        </think>
+        <condition name="answer">
+            <li value="Yes">Yes, <get name="p1"/> is the <get name="rel"/> of <get name="p2"/>.</li>
+            <li value="No">No, <get name="p1"/> is not the <get name="rel"/> of <get name="p2"/>.</li>
+            <li>I'm not sure if <get name="p1"/> is the <get name="rel"/> of <get name="p2"/>.</li>
+        </condition>
+    </template>
+  </category>
+  
+  <category>
+      <pattern>IS * * OF *</pattern>
+      <template><srai>IS <star/> THE <star index="2"/> OF <star index="3"/></srai></template>
+  </category>
+  
+  <category>
+      <pattern>HOW MANY * DOES * HAVE</pattern>
+      <template>
+          <think>
+            <set name="type">howmany</set>
+            <set name="rel"><star/></set>
+            <set name="p1"><star index="2"/></set>
+          </think>
+          <get name="p1"/> has <get name="count"/> <get name="rel"/>
+      </template>
+  </category>
+ 
+  <category>
+      <pattern>HOW MANY * DOES * HAS</pattern>
+      <template><srai>HOW MANY <star/> DOES <star index="2"/> HAVE</srai></template>
+  </category>
+   
+  <category>
+      <pattern>HOW MANY * * HAS</pattern>
+      <template><srai>HOW MANY <star/> DOES <star index="2"/> HAVE</srai></template>
+  </category>
+   
+  <category>
+      <pattern>HOW MANY * * HAVE</pattern>
+      <template><srai>HOW MANY <star/> DOES <star index="2"/> HAVE</srai></template>
+  </category>
+  
+  <category>
+    <pattern>WHAT IS THE AGE OF *</pattern>
+    <template>
+        <think>
+            <set name="type">age</set>
+            <set name="p1"><star/></set>
+        </think>
+        <star/> is <get name="age"/> year old.
+    </template>
+  </category>
+
+  <category>
+      <pattern>WHAT IS AGE OF *</pattern>
+      <template><srai>WHAT IS THE AGE OF <star/></srai></template>
+  </category>
+
+  <category>
+      <pattern>HOW OLD IS *</pattern>
+      <template><srai>WHAT IS THE AGE OF <star/></srai></template>
+  </category>
+
+  <category>
+      <pattern>WHOSE * IS *</pattern>
+      <template>
+        <think>
+            <set name="type">whose</set>
+            <set name="rel"><star/></set>
+            <set name="p2"><star index="2"/></set>
+        </think>
+        <star index="2"/> is the <get name="rel"/> of <get name="p1"/>.
+      </template>
+  </category>
+</aiml>
