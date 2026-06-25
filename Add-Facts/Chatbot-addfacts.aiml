@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+  <!-- "ali is male" -->
+
+  <category>
+    <pattern>ADD MALE *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">male</set>
+        <set name="p1"><star/></set>
+        <set name="p2">none</set>
+      </think>
+      Got it! <star/> is male.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS MALE</pattern>
+    <template><srai>ADD MALE <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>* IS A MALE</pattern>
+    <template><srai>ADD MALE <star/></srai></template>
+  </category>
+
+
+  <!--"sara is female"-->
+
+  <category>
+    <pattern>ADD FEMALE *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">female</set>
+        <set name="p1"><star/></set>
+        <set name="p2">none</set>
+      </think>
+      Got it! <star/> is female.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS FEMALE</pattern>
+    <template><srai>ADD FEMALE <star/></srai></template>
+  </category>
+
+  <category>
+    <pattern>* IS A FEMALE</pattern>
+    <template><srai>ADD FEMALE <star/></srai></template>
+  </category>
+
+
+  <!--"ali was born in 1992"-->
+
+  <category>
+    <pattern>ADD DOB * *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">dateofbirth</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> was born in <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* WAS BORN IN *</pattern>
+    <template>
+     <think>
+      <set name="type">addfact</set>
+      <set name="fact">dateofbirth</set>
+      <set name="p1"><star/></set>
+      <set name="p2"><star index="2"/></set>
+     </think>
+    </template>
+  </category>
+
+  <category>
+    <pattern>DATE OF BIRTH OF * IS *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">dateofbirth</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> was born in <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* BORN IN *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">dateofbirth</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> was born in <star index="2"/>.
+    </template>
+  </category>
+
+
+  <!--"bashir is the parent of ali" , "ali is the child of bashir"-->
+
+
+  <category>
+    <pattern>ADD PARENT * *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">parent</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> is the parent of <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS THE PARENT OF *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">parent</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> is the parent of <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS A PARENT OF *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">parent</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> is the parent of <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS PARENT OF *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">parent</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> is the parent of <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS THE CHILD OF *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">parent</set>
+        <set name="p2"><star/></set>
+        <set name="p1"><star index="2"/></set>
+      </think>
+      Got it! <star/> is the parent of <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS CHILD OF *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">parent</set>
+        <set name="p2"><star/></set>
+        <set name="p1"><star index="2"/></set>
+      </think>
+      Got it! <star/> is the parent of <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS A CHILD OF *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">parent</set>
+        <set name="p2"><star/></set>
+        <set name="p1"><star index="2"/></set>
+      </think>
+      Got it! <star/> is the parent of <star index="2"/>.
+    </template>
+  </category>
+
+  <!--"ali is married to alia"-->
+
+
+  <category>
+    <pattern>ADD MARRIED * *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">married</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> is married to <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* IS MARRIED TO *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">married</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> is married to <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* MARRIED *</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">married</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> is married to <star index="2"/>.
+    </template>
+  </category>
+
+  <category>
+    <pattern>* AND * ARE MARRIED</pattern>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">married</set>
+        <set name="p1"><star/></set>
+        <set name="p2"><star index="2"/></set>
+      </think>
+      Got it! <star/> is married to <star index="2"/>.
+    </template>
+  </category>
+
+
+  <!--"show facts"-->
+
+  <category>
+    <pattern>SHOW FACTS</pattern>
+    <template>
+      <think>
+        <set name="type">showfacts</set>
+      </think>
+      Okay, let me show you the current facts in the knowledge base.
+    </template>
+  </category>
+
+  <category>
+    <pattern>LIST FACTS</pattern>
+    <template><srai>SHOW FACTS</srai></template>
+  </category>
+
+  <category>
+    <pattern>WHAT FACTS DO YOU KNOW</pattern>
+    <template><srai>SHOW FACTS</srai></template>
+  </category>
+
+</aiml>
