@@ -1,3 +1,4 @@
+female(sara).
 male(soban).
 dateofbirth(dani,1999).
 dateofbirth(dani,1998).
