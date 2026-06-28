@@ -165,7 +165,7 @@ while True:
         p1 = bot.getPredicate("p1").lower().strip()
         p2 = bot.getPredicate("p2").lower().strip()
 
-        facts_to_add = build_facts(fact_type, person1, person2)
+        facts_to_add = build_facts(fact_type, p1, p2)
 
         added_any = False
         for fact_line in facts_to_add:

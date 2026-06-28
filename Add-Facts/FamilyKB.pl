@@ -13,7 +13,10 @@ dateofbirth(sadi,1990).
 male(sami).
 male(sadi).
 male(ali).
-neq(X,Y):- X/=Y.
+
+neq(X,Y) :- X \= Y.
+neq(X, X) :- !, fail.
+neq(_, _).
 
 age(X,A)          :- dateofbirth(X,Y), A is 2026-Y.
 elder(X,Y)        :- age(X,AX), age(Y,AY), AX > AY.

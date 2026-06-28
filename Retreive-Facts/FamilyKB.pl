@@ -78,6 +78,10 @@ marriedto(alia,ali).
 marriedto(ajwa,sadi).
 marriedto(zara,shakeel).
 
+neq(X,Y) :- X \= Y.
+neq(X, X) :- !, fail.
+neq(_, _).
+
 age(X,A) :- dateofbirth(X,Y),A is 2026-Y.
 elder(X,Y):- age(X,AX),age(Y,AY),AX>AY.
 younger(X,Y):- age(X,AX),age(Y,AY),AX<AY.
