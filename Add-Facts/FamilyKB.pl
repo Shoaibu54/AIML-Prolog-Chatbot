@@ -1,3 +1,6 @@
+male(soban).
+dateofbirth(dani,1999).
+dateofbirth(dani,1998).
 parent(dani,pomi).
 dateofbirth(pomi,1988).
 male(pomi).
@@ -10,7 +13,7 @@ dateofbirth(sadi,1990).
 male(sami).
 male(sadi).
 male(ali).
-
+neq(X,Y):- X/=Y.
 
 age(X,A)          :- dateofbirth(X,Y), A is 2026-Y.
 elder(X,Y)        :- age(X,AX), age(Y,AY), AX > AY.

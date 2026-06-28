@@ -12,18 +12,34 @@
         <set name="p1"><star/></set>
         <set name="p2">none</set>
       </think>
-      Got it! <star/> is male.
+      Got it!
     </template>
   </category>
 
   <category>
     <pattern>* IS MALE</pattern>
-    <template><srai>ADD MALE <star/></srai></template>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">male</set>
+        <set name="p1"><star/></set>
+        <set name="p2">none</set>
+      </think>
+      Got it!
+    </template>
   </category>
 
   <category>
     <pattern>* IS A MALE</pattern>
-    <template><srai>ADD MALE <star/></srai></template>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">male</set>
+        <set name="p1"><star/></set>
+        <set name="p2">none</set>
+      </think>
+    </template>
+    Got it!
   </category>
 
 
@@ -38,18 +54,34 @@
         <set name="p1"><star/></set>
         <set name="p2">none</set>
       </think>
-      Got it! <star/> is female.
+      Got it!
     </template>
   </category>
 
   <category>
     <pattern>* IS FEMALE</pattern>
-    <template><srai>ADD FEMALE <star/></srai></template>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">female</set>
+        <set name="p1"><star/></set>
+        <set name="p2">none</set>
+      </think>
+      Got it!
+    </template>
   </category>
 
   <category>
     <pattern>* IS A FEMALE</pattern>
-    <template><srai>ADD FEMALE <star/></srai></template>
+    <template>
+      <think>
+        <set name="type">addfact</set>
+        <set name="fact">female</set>
+        <set name="p1"><star/></set>
+        <set name="p2">none</set>
+      </think>
+      Got it!
+    </template>
   </category>
 
 
@@ -64,7 +96,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> was born in <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -77,6 +109,7 @@
       <set name="p1"><star/></set>
       <set name="p2"><star index="2"/></set>
      </think>
+     Got it!
     </template>
   </category>
 
@@ -89,7 +122,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> was born in <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -102,7 +135,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> was born in <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -119,7 +152,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> is the parent of <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -132,7 +165,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> is the parent of <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -145,7 +178,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> is the parent of <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -158,7 +191,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> is the parent of <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -171,7 +204,7 @@
         <set name="p2"><star/></set>
         <set name="p1"><star index="2"/></set>
       </think>
-      Got it! <star/> is the parent of <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -184,7 +217,7 @@
         <set name="p2"><star/></set>
         <set name="p1"><star index="2"/></set>
       </think>
-      Got it! <star/> is the parent of <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -197,13 +230,11 @@
         <set name="p2"><star/></set>
         <set name="p1"><star index="2"/></set>
       </think>
-      Got it! <star/> is the parent of <star index="2"/>.
+      Got it!
     </template>
   </category>
 
   <!--"ali is married to alia"-->
-
-
   <category>
     <pattern>ADD MARRIED * *</pattern>
     <template>
@@ -213,7 +244,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> is married to <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -226,7 +257,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> is married to <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -239,7 +270,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> is married to <star index="2"/>.
+      Got it!
     </template>
   </category>
 
@@ -252,7 +283,7 @@
         <set name="p1"><star/></set>
         <set name="p2"><star index="2"/></set>
       </think>
-      Got it! <star/> is married to <star index="2"/>.
+      Got it!
     </template>
   </category>
 
