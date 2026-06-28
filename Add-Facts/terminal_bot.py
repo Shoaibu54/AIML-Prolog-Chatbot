@@ -6,7 +6,8 @@ import os
 import pytholog.search_util as _su, pytholog.querizer as _qz
 from pytholog.goal import Goal as _G;
 from pytholog.fact import Fact as _F
-
+import time
+time.clock = time.perf_counter
 
 def _neq_fix(rule, cg, Q):
     t0, t1 = rule.terms[0], rule.terms[1]
