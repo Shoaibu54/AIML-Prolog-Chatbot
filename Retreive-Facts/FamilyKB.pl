@@ -115,8 +115,8 @@ nana(X,Y):- father(X,Z),mother(Z,Y).
 nani(X,Y):- mother(X,Z),mother(Z,Y).
 
 uncle(X,Y):- brother(X,PA),parent(PA,Y).
-chacha(X,Y):- brother(X,Z),father(Z,Y),younger(Z,X).
-taya(X,Y):- brother(X,Z),father(Z,Y),elder(Z,X).
+chacha(X,Y):- youngerbrother(X,Z),father(Z,Y).
+taya(X,Y):- elderbrother(X,Z),father(Z,Y).
 phupha(X,Y):- husband(X,Z),phupho(Z,Y).
 mamu(X,Y):- brother(X,Z),mother(Z,Y).
 khalu(X,Y):- husband(X,Z),khala(Z,Y).
@@ -130,6 +130,8 @@ chachi(X,Y):- wife(X,Z),chacha(Z,Y).
 cousin(X,Y) :- parent(PX,X),parent(PY,Y),sibling(PX,PY),neq(X,Y).
 
 nephew(X,Y):- male(X),uncle(Y,X).
+nephew(X,Y):- male(X),aunt(Y,X).
+neice(X,Y):- female(X),aunt(Y,X).
 neice(X,Y):- female(X),uncle(Y,X).
 bhanja(X,Y):- male(X),khala(Y,X).
 bhanja(X,Y):- male(X),mamu(Y,X).

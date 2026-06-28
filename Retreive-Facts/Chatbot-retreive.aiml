@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+<category>
   <pattern>TELL ME *</pattern>
   <template><srai><star/></srai></template>
 </category>
@@ -97,14 +98,24 @@
         <condition name="answer">
             <li value="Yes">Yes, <get name="p1"/> is the <get name="rel"/> of <get name="p2"/>.</li>
             <li value="No">No, <get name="p1"/> is not the <get name="rel"/> of <get name="p2"/>.</li>
-            <li>I'm not sure if <get name="p1"/> is the <get name="rel"/> of <get name="p2"/>.</li>
         </condition>
     </template>
   </category>
   
   <category>
       <pattern>IS * * OF *</pattern>
-      <template><srai>IS <star/> THE <star index="2"/> OF <star index="3"/></srai></template>
+    <template>
+        <think>
+          <set name="type">isthe</set>
+          <set name="p1"><star/></set>
+          <set name="rel"><star index="2"/></set>
+          <set name="p2"><star index="3"/></set>
+        </think>
+        <condition name="answer">
+            <li value="Yes">Yes, <get name="p1"/> is the <get name="rel"/> of <get name="p2"/>.</li>
+            <li value="No">No, <get name="p1"/> is not the <get name="rel"/> of <get name="p2"/>.</li>
+        </condition>
+    </template>
   </category>
   
   <category>
