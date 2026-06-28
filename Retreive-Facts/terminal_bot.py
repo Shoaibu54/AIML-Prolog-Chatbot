@@ -8,8 +8,8 @@ from aiml import Kernel
 import pytholog as pl
 from glob import glob
 import os
-
-
+import time
+time.clock = time.perf_counter
 
 import pytholog.search_util as _su, pytholog.querizer as _qz
 from pytholog.goal import Goal as _G; from pytholog.fact import Fact as _F
@@ -20,7 +20,7 @@ _su.filter_eq=_neq_fix; _qz.filter_eq=_neq_fix
 # ─────────────────────────────────────────────
 #  PATHS  →  adjust if your files move
 # ─────────────────────────────────────────────
-BASE_DIR  = r"D:\Pycharm\ChatBot\Repo"
+BASE_DIR  = r"D:\Projects\AIML-Prolog-Chatbot/Retreive-Facts"
 PL_FILE   = os.path.join(BASE_DIR, "FamilyKB.pl")
 AIML_GLOB = os.path.join(BASE_DIR, "*.aiml")
 

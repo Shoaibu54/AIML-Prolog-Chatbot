@@ -17,7 +17,7 @@ def _neq_fix(rule, cg, Q):
 _su.filter_eq = _neq_fix
 _qz.filter_eq = _neq_fix
 
-BASE_DIR = r"D:\Pycharm\ChatBot\Assignment 02"
+BASE_DIR = r"D:\Projects\AIML-Prolog-Chatbot/Add-Facts"
 PL_FILE = os.path.join(BASE_DIR, "FamilyKB.pl")
 AIML_GLOB = os.path.join(BASE_DIR, "*.aiml")
 
